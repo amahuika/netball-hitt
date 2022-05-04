@@ -1,0 +1,118 @@
+* {
+  color: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+  max-height: 100vh;
+}
+
+body {
+  overscroll-behavior: contain;
+  max-height: 100vh;
+}
+
+.timerBtnDiv {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 15vh;
+  border-style: solid;
+  border-color: rgb(120, 105, 105);
+
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.workoutDisplay {
+  display: flex;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: rgb(120, 105, 105);
+
+  margin-top: 0.3rem;
+  font-size: 2.5rem;
+
+  scroll-snap-align: start;
+
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(0, 0, 0, 0.22);
+}
+
+.backgroundImg {
+  background-image: url(./images/WorkoutBackground.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  filter: grayscale(90%);
+}
+
+.container {
+  position: relative;
+}
+
+.mainBtn {
+  /* From https://css.glass */
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.congratulations {
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+.exerciseMain {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 45vh;
+  /* padding: 0; */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.timeRemainderDiv {
+  background: rgba(0, 0, 0, 0.59);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 2px solid rgba(0, 0, 0, 0.22);
+}
+
+.exerciseMain::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}

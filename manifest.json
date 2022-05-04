@@ -1,0 +1,27 @@
+{
+  "name": "HIIT ME",
+  "short_name": "HIIT ME",
+  "icons": [
+    {
+      "src": "./icons/workout128.png",
+      "sizes": "128x128",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/workout256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/workout512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "/HIIT-ME/",
+  "display": "standalone",
+  "background_color": "#f5f5f5",
+  "theme_color": "#343a40",
+  "orientation": "portrait"
+}

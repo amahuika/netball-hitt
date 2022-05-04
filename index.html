@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link href="./bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="manifest" href="./manifest.json" />
+    <script src="./dexie.min.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <title>Workout Generator</title>
+  </head>
+
+  <body>
+    <div class="container-fluid p-0" style="background-color: #606060">
+      <div class="backgroundImg"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="mainBtn">
+              <h1 class="">HIIT ME</h1>
+
+              <p>
+                HIIT ME selects 12 random exercises and generates a HIIT workout
+                routine, no equipment needed.
+              </p>
+              <p>Enter the length of workout you want to do.</p>
+
+              <div class="col-md-6 col-8 mb-2">
+                <label for="">Length of workout in min</label>
+                <input
+                  id="length"
+                  class="form-control"
+                  type="number"
+                  size="40"
+                  placeholder="eg 25"
+                />
+              </div>
+              <div>
+                <button id="generate25" class="btn btn-primary px-3">
+                  HIIT ME!
+                </button>
+              </div>
+            </div>
+            <div class="timerBtnDiv d-none p-3 my-3">
+              <div class="d-flex align-items-center">
+                <button class="stopBtn btn btn-lg px-3 btn-danger rounded-pill">
+                  Stop
+                </button>
+              </div>
+              <div class="d-flex align-items-center">
+                <a href="#top">
+                  <button
+                    class="playBtn btn btn-lg px-3 btn-success rounded-pill"
+                  >
+                    Play
+                  </button>
+                </a>
+              </div>
+              <span class="timer">0</span>
+            </div>
+            <div class="exerciseMain p-0">
+              <div
+                class="congratulations border-success text-center d-none mt-3 py-3"
+              >
+                <h2 class="text-success">Well Done!</h2>
+                <p>Total time: <span class="totalTime">00:00</span></p>
+              </div>
+            </div>
+
+            <div
+              class="timeRemainderDiv text-center col-lg-2 col-md-3 col-5 mt-3 d-none"
+            >
+              <span>Time remaining</span>
+              <p class="timeRemaining mb-0">0:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <button class="d-none topBtn">top</button> -->
+    </div>
+
+    <script src="./script.js"></script>
+
+    <script
+      src="./bootstrap/js/bootstrap.bundle.min.js"
+      type="text/javascript"
+    ></script>
+  </body>
+</html>
